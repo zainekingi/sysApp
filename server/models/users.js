@@ -6,18 +6,6 @@ DESC:       Main model for interacting with the USERS database collection.
 //File Dependencies ------------------------------------------------------------
 var mongoose = require('mongoose');
 
-//Define the email validation function.
-var validateEmail = function(email) {
-    var re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    return re.test(email)
-};
-
-//Define the password validation function.
-var validatePassword = function(password){
-  var re = /^\(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/;
-  return re.test(password)
-};
-
 //Define the USERS model schema ------------------------------------------------
 var usersSchema = mongoose.Schema({
     //First Name
@@ -40,9 +28,7 @@ var usersSchema = mongoose.Schema({
         trim: true,
         lowercase: true,
         unique: true,
-        required: 'Email address is required!',
-        validate: [validateEmail, 'Please fill a valid email address'],
-        match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address']
+        required: 'Email address is required!'
     },
     //Password
     password: {
@@ -50,8 +36,6 @@ var usersSchema = mongoose.Schema({
         trim: true,
         minlength: 8,
         required: 'A password is required!'
-        //validate: [validatePassword, 'Please enter a secure password!'],
-        //match: [/^\(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/, 'Please enter a secure password!']
     },
     //Record creation date.
     create_date: {
