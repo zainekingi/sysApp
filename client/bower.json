@@ -1,0 +1,17 @@
+{
+  "name": "Support Your School",
+  "homepage": "https://github.com/zainekingi/sysApp",
+  "authors": [
+    "zaine-kingi <zainekingi@users.noreply.github.com>"
+  ],
+  "description": "WSL Support Your School application microsite for school list administration users to manage and publish school stationery lists for use on the Warehouse Stationery website.",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular-route": "^1.5.9",
+    "angular": "^1.5.9",
+    "jquery": "^3.1.1",
+    "bootstrap": "^3.3.7"
+  }
+}
