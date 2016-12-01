@@ -11,12 +11,15 @@ var express     = require('express'),
     mongoose    = require('mongoose'),
     Users       = require('./models/users');
 
+//Set static directory -------------------------------------------------------
+app.use(express.static(__dirname + '/client'));
+
 //Application Middleware -----------------------------------------------------
 app.use(bodyParser.json());
 
 //Application Routes ---------------------------------------------------------
 app.get('/', function(req, res, next) {
-    res.send('Hello world');
+    res.send('../client/index.html');
     next();
 });
 
