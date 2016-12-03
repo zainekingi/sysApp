@@ -1,8 +1,8 @@
 var sysApp = angular.module('sysApp', ['ngRoute']);
 
 sysApp.config(function($routeProvider){
-  routeProvider
-    .when('/', {
+    $routeProvider
+      .when('/', {
       controller: 'UsersController',
       templateUrl: 'views/home.html'
     })
