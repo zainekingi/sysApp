@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 
 //Application Routes ---------------------------------------------------------
 app.get('/', function(req, res, next) {
-    res.send('../client/index.html');
+    res.send('Hmmmmm? how did you get here?? Try /login or /register');
     next();
 });
 
