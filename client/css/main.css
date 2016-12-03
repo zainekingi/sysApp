@@ -1,0 +1,9 @@
+/* =======================================================================
+    FILE:       MAIN.CSS
+    AUTHOR:     Zaine Kingi
+    DESC:       Main application stylesheet for custom CSS styling.
+  ---------------------------------------------------------------------- */
+/* Mobile first--------------------------------------------------------- */
+div[role='content-container'] {
+  margin-top: 50px;
+}
