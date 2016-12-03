@@ -4,7 +4,7 @@ sysApp.config(function($routeProvider){
   routeProvider
     .when('/', {
       controller: 'UsersController',
-      templateUrl: 'views/register.html'
+      templateUrl: 'views/home.html'
     })
     .when('/login', {
       controller: 'UsersController',
@@ -22,7 +22,7 @@ sysApp.config(function($routeProvider){
       controller: 'UsersController',
       templateUrl: 'views/edit_details.html'
     })
-    otherwise({
+    .otherwise({
       redirectTo: '/'
     });
 });
