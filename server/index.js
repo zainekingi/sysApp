@@ -12,7 +12,7 @@ var express     = require('express'),
     Users       = require('./models/users');
 
 //Set static directory -------------------------------------------------------
-app.use(express.static(__dirname + '/client'));
+app.use(express.static(__dirname+'/../client'));
 
 //Application Middleware -----------------------------------------------------
 app.use(bodyParser.json());
