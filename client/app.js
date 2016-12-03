@@ -8,7 +8,7 @@ sysApp.config(function($routeProvider){
     })
     .when('/login', {
       controller: 'UsersController',
-      templateUrl: 'view/login.html'
+      templateUrl: 'views/login.html'
     })
     .when('/register', {
       controller: 'UsersController',
