@@ -1,0 +1,17 @@
+<div class="panel panel-default" ng-init="getUser()">
+  <div class="panel-heading"><h3 class="text-center"><i class="glyphicon glyphicon-user"></i> User Profile</h3></div>
+  <div class="panel-body">
+    <dl class="dl-horizontal">
+      <dt>First Name:</dt>
+      <dd>{{ users.first_Name }}</dd>
+      <dt>Surname:</dt>
+      <dd>{{ users.last_Name }}</dd>
+      <dt>Email Address:</dt>
+      <dd>{{ users.email }}</dd>
+    </dl>
+  </div>
+</div>
+<div class="pull-right">
+  <a href="#/user/edit/{{ users._id }}">Edit Details</a> | <a href="#" ng-click="deleteUser(users._id)">Delete User</a>
+</div>
+
