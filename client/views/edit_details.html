@@ -1,0 +1,56 @@
+<h1>Update Profile</h1>
+
+<hr>
+
+<p><small>All fields are required fields.</small></p>
+
+<form ng-submit="updateUser()" ng-init="getUser()">
+
+  <legend class="col-md-9 col-sm-12">
+
+    <div class="form-group">
+      <div class="input-group col-md-12 col-sm-12">
+        <span class="input-group-addon" id="firstName" aria-hidden="true"><i class=" glyphicon glyphicon-user"></i></span>
+        <input type="text" ng-model="users.first_Name" class="form-control" placeholder="First Name" name="firstName" required>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="input-group col-md-12 col-sm-12">
+        <span class="input-group-addon" id="astName" aria-hidden="true"><i class="glyphicon glyphicon-user"></i></span>
+        <input type="text" ng-model="users.last_Name" class="form-control" placeholder="Last Name" name="lastName" required>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="input-group col-md-12 col-sm-12">
+        <span class="input-group-addon" id="email" aria-hidden="true"><i class="glyphicon glyphicon-envelope"></i></span>
+        <input type="email" ng-model="users.email" class="form-control" placeholder="Email Address" name="email" required>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="input-group col-md-12 col-sm-12">
+        <span class="input-group-addon" id="password" aria-hidden="true"><i class="glyphicon glyphicon-lock"></i></span>
+        <input type="password" ng-model="users.password" class="form-control" placeholder="Password" name="password" required>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="input-group col-md-12 col-sm-12">
+        <span class="input-group-addon" id="conf_password" aria-hidden="true"><i class="glyphicon glyphicon-lock"></i></span>
+        <input type="password" class="form-control" placeholder="Confirm Password" name="conf_password" required>
+      </div>
+    </div>
+
+  </legend>
+
+  <div class="col-md-9 col-sm-12">
+    <button type="submit" class="btn btn-primary btn-md pull-right" aria-label="plus">
+      <span class="glyphicon glyphicon-plus"></span> Update Details
+    </button>
+  </div>
+
+</form>
+
+
