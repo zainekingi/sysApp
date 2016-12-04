@@ -19,17 +19,25 @@ sysApp.controller('UsersController', ['$scope', '$http', '$location', '$routePar
   }
   // Scope function to add a record to the database.
   $scope.addUser = function() {
+    var id = $routeParams.id;
     $http.post('/api/users/', $scope.users).success(function(response) {
-      window.location.href = '/api/users'
+      window.location.href = '/#/user/details/' + id;
     });
   }
   // Scope function to update a record in the database.
-  $scope.updateUser = function(id) {
+  $scope.updateUser = function() {
     // Get current record ID.
     var id = $routeParams.id;
     $http.put('/api/users/' + id, $scope.users).success(function(response) {
       // Redirect the user back to the updated user profile.
-      window.location.href = '/api/users/' + id;
+      window.location.href = '/#/user/details/' + id;
+    });
+  }
+  // Scope function to remove a record from the database.
+  $scope.deleteUser = function(id) {
+    $http.delete('/api/users/' + id).success(function(response) {
+      // Redirect to the homepage.
+      window.location.href = '/'
     });
   }
 
