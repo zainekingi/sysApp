@@ -4,7 +4,7 @@
 
 <p><small>All fields are required fields.</small></p>
 
-<form ng-submit="updateUser()" ng-init="getUser()">
+<form ng-init="getUser()">
 
   <legend class="col-md-9 col-sm-12">
 
@@ -36,19 +36,17 @@
       </div>
     </div>
 
-    <div class="form-group">
-      <div class="input-group col-md-12 col-sm-12">
-        <span class="input-group-addon" id="conf_password" aria-hidden="true"><i class="glyphicon glyphicon-lock"></i></span>
-        <input type="password" class="form-control" placeholder="Confirm Password" name="conf_password" required>
-      </div>
-    </div>
-
   </legend>
 
   <div class="col-md-9 col-sm-12">
-    <button type="submit" class="btn btn-primary btn-md pull-right" aria-label="plus">
-      <span class="glyphicon glyphicon-plus"></span> Update Details
+    <button type="submit" class="btn btn-primary btn-md pull-right" aria-label="plus" ng-click="updateUser()">
+      <span class="glyphicon glyphicon-save"></span> Update Details
     </button>
+    <a href="#/user/details/{{ users._id }}">
+      <button type="submit" class="btn btn-default btn-md pull-left" aria-label="cancel">
+        <span class="glyphicon glyphicon-remove"></span> Cancel
+      </button>
+    </a>
   </div>
 
 </form>
