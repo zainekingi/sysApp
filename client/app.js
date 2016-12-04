@@ -18,7 +18,7 @@ sysApp.config(function($routeProvider){
       controller: 'UsersController',
       templateUrl: 'views/user_details.html'
     })
-    .when('user/edit/:id', {
+    .when('/user/edit/:id', {
       controller: 'UsersController',
       templateUrl: 'views/edit_details.html'
     })
