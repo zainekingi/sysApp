@@ -4,6 +4,30 @@
     DESC:       Main application stylesheet for custom CSS styling.
   ---------------------------------------------------------------------- */
 /* Mobile first--------------------------------------------------------- */
+/*Typography*/
+h1 {
+    color: #333; font-size: 2.3rem; font-weight: 100;
+}
+/*h1:after {*/
+    /*width: 50%;*/
+    /*height: 2px;*/
+    /*background-color: #eaeaea;*/
+    /*content: "";*/
+    /*display: inline-block;*/
+    /*margin-left: 15px;*/
+    /*margin-top: 13px;*/
+    /*position: absolute;*/
+/*}*/
+/* Base element styling */
+body {
+
+}
+nav.navbar {
+    background: rgba(0,0,0,.8);
+}
 div[role='content-container'] {
-  margin-top: 50px;
+  margin-top: 10%;
+}
+footer {
+  color: #fff; width: 100%; margin-top: 25px; padding: 15px 15px 5px; background: #333;
 }
