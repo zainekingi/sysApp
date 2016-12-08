@@ -14,6 +14,10 @@ sysApp.config(function($routeProvider){
       controller: 'UsersController',
       templateUrl: 'views/register.html'
     })
+    .when('/users', {
+        controller: 'UsersController',
+        templateUrl: 'views/users.html'
+    })
     .when('/user/details/:id', {
       controller: 'UsersController',
       templateUrl: 'views/user_details.html'
