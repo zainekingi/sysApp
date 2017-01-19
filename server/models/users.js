@@ -6,7 +6,7 @@ DESC:       Main model for interacting with the USERS database collection.
 //File Dependencies ------------------------------------------------------------
 var mongoose = require('mongoose');
 
-//Define the USERS model schema ------------------------------------------------
+//Define the USERS schema ------------------------------------------------
 var usersSchema = mongoose.Schema({
     //First Name
     first_Name: {
@@ -47,7 +47,7 @@ var usersSchema = mongoose.Schema({
 //Export the Users schema.
 var Users = module.exports = mongoose.model('Users', usersSchema);
 
-//Database interactions.
+//USER methods ------------------------------------------------------------
 //Get collection.
 module.exports.getUsers = function(callback, limit) {
     Users.find(callback).limit();
@@ -56,10 +56,12 @@ module.exports.getUsers = function(callback, limit) {
 module.exports.getUserById = function(id, callback) {
     Users.findById(id, callback);
 }
-//Add record.
+
+//Add new record.
 module.exports.addUser = function(user, callback) {
     Users.create(user, callback);
 }
+
 //Update record.
 module.exports.updateUser = function(id, user, options, callback) {
     var query = { _id: id };
@@ -71,6 +73,7 @@ module.exports.updateUser = function(id, user, options, callback) {
     }
     Users.findOneAndUpdate(query, user, options, update, callback);
 }
+
 //Delete record.
 module.exports.deleteUser = function(id, callback) {
     var query = {_id: id};
