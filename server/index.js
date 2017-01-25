@@ -128,12 +128,12 @@ app.get('/api/schools/:_id', function(req, res) {
     });
 });
 //Update School.
-app.put('/api/school/:_id', function(req, res) {
+app.put('/api/schools/:_id', function(req, res) {
     //Get the ID from the URL parameter.
     var id = req.params._id;
     //Store the post form data.
     var school = req.body;
-    Schools.updateSchool(id, school, {}, function(err, school) {
+    Schools.updateSchool(id, school, function(err, school) {
         //Check for errors in the post form data.
         if(err) {
             throw err;
