@@ -2,7 +2,7 @@ var sysApp = angular.module('sysApp', ['ngRoute']);
 
 sysApp.config(function($routeProvider){
     $routeProvider
-      .when('/', {
+    .when('/', {
       controller: 'SchoolsController',
       templateUrl: 'views/home.html'
     })
@@ -15,8 +15,8 @@ sysApp.config(function($routeProvider){
       templateUrl: 'views/register.html'
     })
     .when('/users', {
-        controller: 'UsersController',
-        templateUrl: 'views/users.html'
+      controller: 'UsersController',
+      templateUrl: 'views/users.html'
     })
     .when('/user/details/:id', {
       controller: 'UsersController',
@@ -27,12 +27,12 @@ sysApp.config(function($routeProvider){
       templateUrl: 'views/edit_details.html'
     })
     .when('/schools', {
-        controller: 'SchoolsController',
-        templateUrl: 'views/home.html'
+      controller: 'SchoolsController',
+      templateUrl: 'views/home.html'
     })
-    when('/schools/details/:id', {
-        controller: 'schoolsController',
-        templateUrl: 'views/school_details.html'
+    .when('/schools/details/:id', {
+      controller: 'schoolsController',
+      templateUrl: 'views/school_details.html'
     })
     .otherwise({
       redirectTo: '/'
