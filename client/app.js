@@ -30,7 +30,7 @@ sysApp.config(function($routeProvider){
         controller: 'SchoolsController',
         templateUrl: 'views/home.html'
     })
-    when('/schools/details/:id', {
+    .when('/schools/details/:id', {
         controller: 'schoolsController',
         templateUrl: 'views/school_details.html'
     })
