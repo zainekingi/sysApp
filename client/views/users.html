@@ -6,9 +6,13 @@
                 <h4><i class="glyphicon glyphicon-user" style="font-size: 2rem; color: #333; margin-right: 25px;"></i>{{ user.first_Name }} {{ user.last_Name }}<a href="#" ng-click="deleteUser(user._id)" class="pull-right"><i class="glyphicon glyphicon-remove" style="color: #333;"></i></a></h4><br>
                 <p><i class="glyphicon glyphicon-envelope" style="font-size: 2rem; color: #333; margin-right: 25px;"></i>{{ user.email }}</p>
                 <p>{{ user._id }}</p>
-                <p style="text-align: right">
+                <span class="pull-left">
+                    <a href="/#/user/details/{{ user._id }}" class="btn btn-default btn-sm"><i class="glyphicon glyphicon-user"></i> View Info</a>
+                </span>
+                <span class="pull-right">
                     <a href="/#/user/edit/{{ user._id }}" class="btn btn-primary btn-sm"><i class="glyphicon glyphicon-edit"></i> Update User</a>
-                </p>
+                </span>
+                <div style="clear: both;"></div>
             </li>
         </ul>
     </div>
