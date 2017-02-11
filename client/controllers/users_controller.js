@@ -11,7 +11,7 @@ sysApp.controller('UsersController', ['$scope', '$http', '$location', '$routePar
   // Scope function to fetch a record from the database.
   $scope.getUser = function() {
     // Get the record id.
-    var id = $routeParams.id; console.log('From the controller ' + id);
+    var id = $routeParams.id;
     $http.get('/api/users/' + id).success(function(response) {
       // Assign the user object as the response.
       $scope.users = response;
