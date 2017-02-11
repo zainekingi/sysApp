@@ -17,6 +17,13 @@ sysApp.controller('SchoolsController', ['$scope', '$routeParams', '$location', '
         });
     }
     // Get school by ID.
+    $scope.getSchool = function() {
+        // Get the School ID from the URL.
+        var id = $routeParams.id;
+        $http.get('/api/schools/' + id).success(function(response) {
+            $scope.schools = response;
+        });
+    }
     // Add school.
     // Update school.
     // Delete school.
