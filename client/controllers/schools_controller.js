@@ -26,6 +26,14 @@ sysApp.controller('SchoolsController', ['$scope', '$routeParams', '$location', '
     }
     // Add school.
     // Update school.
+    $scope.updateSchool = function() {
+        // Get current school ID.
+        var id = $routeParams.id;
+        $http.put('/api/schools/' + id, $scope.schools).success(function() {
+            // Redirect the user back to the updated school profile.
+            window.location.href = '/#/school/details/' + id;
+        });
+    }
     // Delete school.
 
 }]);
