@@ -2,19 +2,17 @@
     <div class="panel-heading"><h3 class="text-center"><i class="glyphicon glyphicon-education"></i> {{ schools.school_name }}</h3></div>
     <div class="panel-body">
         <dl class="dl-horizontal">
-            <dt><i class="glyphicon glyphicon-user"></i> School Admin:</dt>
+            <dt><i class="glyphicon glyphicon-user"></i></dt>
             <dd>{{ schools.admin_fname }} {{ schools.admin_lname }}</dd>
-            <dt><i class="glyphicon glyphicon-education"></i> School Address:</dt>
+            <dt><i class="glyphicon glyphicon-map-marker"></i></dt>
             <dd>
-                {{ schools.address_no }} {{ schools.street_name }} {{ schools.street_type }}<br>
-                {{ schools.suburb }}<br>
-                {{ schools.city }}<br>
-                0{{ schools.post_code }}<br>
+                {{ schools.address_no }} {{ schools.street_name }} {{ schools.street_type }}, {{ schools.suburb }}<br>
+                {{ schools.city }}, 0{{ schools.post_code }}<br>
                 {{ schools.country }}
             </dd>
-            <dt><i class="glyphicon glyphicon-phone"></i> Phone No:</dt>
+            <dt><i class="glyphicon glyphicon-phone"></i></dt>
             <dd>0{{ schools.phone_number }}</dd>
-            <dt><i class="glyphicon glyphicon-envelope"></i> Email Address:</dt>
+            <dt><i class="glyphicon glyphicon-envelope"></i></dt>
             <dd>{{ schools.school_email }}</dd>
         </dl>
     </div>
