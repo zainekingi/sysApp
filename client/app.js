@@ -30,9 +30,13 @@ sysApp.config(function($routeProvider){
         controller: 'SchoolsController',
         templateUrl: 'views/home.html'
     })
-    .when('/schools/details/:id', {
+    .when('/school/details/:id', {
         controller: 'SchoolsController',
         templateUrl: 'views/school_details.html'
+    })
+    .when('/school/edit/:id', {
+        controller: 'SchoolsController',
+        templateUrl: 'views/edit_school.html'
     })
     .otherwise({
       redirectTo: '/'
