@@ -19,7 +19,7 @@ sysApp.controller('UsersController', ['$scope', '$http', '$location', '$routePar
   }
   // Scope function to add a record to the database.
   $scope.addUser = function() {
-    $http.post('/api/users/', $scope.user).success(function(response) {
+    $http.post('/api/users/', $scope.user).success(function() {
       window.location.href = '/#/users';
     });
   }
