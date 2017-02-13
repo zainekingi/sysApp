@@ -38,6 +38,10 @@ sysApp.config(function($routeProvider){
         controller: 'SchoolsController',
         templateUrl: 'views/edit_school.html'
     })
+        .when('/school/add', {
+            controller: 'SchoolsController',
+            templateUrl: 'views/add_school.html'
+        })
     .otherwise({
       redirectTo: '/'
     });
