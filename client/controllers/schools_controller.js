@@ -12,7 +12,7 @@ sysApp.controller('SchoolsController', ['$scope', '$routeParams', '$location', '
     console.log('SchoolsController loaded...');
     // Get all schools.
     $scope.getSchools = function() {
-        $http.get('/api/schools').success(function(response) {
+        $http.get('/api/schools/').success(function(response) {
             $scope.schools = response;
         });
     }
@@ -25,6 +25,11 @@ sysApp.controller('SchoolsController', ['$scope', '$routeParams', '$location', '
         });
     }
     // Add school.
+    $scope.addSchool = function() {
+        $http.post('/api/schools/', $scope.schools).success(function() {
+           window.location.href = '/';
+        });
+    }
     // Update school.
     $scope.updateSchool = function() {
         // Get current school ID.
