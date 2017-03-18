@@ -8,7 +8,7 @@ DESC:       Main controller for the School object interaction.
 var sysApp = angular.module('sysApp');
 
 // Define the controller and dependencies.
-sysApp.controller('SchoolsController', ['$scope', '$routeParams', '$location', '$http', function($scope, $routeParams, $loaction, $http) {
+sysApp.controller('SchoolsController', ['$scope', '$routeParams', '$location', '$http', function($scope, $routeParams, $location, $http) {
     console.log('SchoolsController loaded...');
     // Get all schools.
     $scope.getSchools = function() {
@@ -27,7 +27,7 @@ sysApp.controller('SchoolsController', ['$scope', '$routeParams', '$location', '
     // Add school.
     $scope.addSchool = function() {
         $http.post('/api/schools/', $scope.schools).success(function() {
-           window.location.href = '/';
+           window.location.href = '/#/schools';
         });
     }
     // Update school.
@@ -40,5 +40,11 @@ sysApp.controller('SchoolsController', ['$scope', '$routeParams', '$location', '
         });
     }
     // Delete school.
+    $scope.deleteSchool = function(id) {
+        $http.delete('/api/schools/' + id).success(function(response) {
+            // Redirect to the homepage.
+            window.location.href = '/#/schools';
+        });
+    }
 
 }]);
