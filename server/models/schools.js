@@ -13,73 +13,72 @@ var schoolsSchema = mongoose.Schema({
     admin_fname: {
         type: String,
         trim: true,
-        required: 'School admin First Name is required!'
+        //required: 'School admin First Name is required!'
     },
     //School admin last name.
     admin_lname: {
         type: String,
         trim: true,
-        required: 'School admin last name is required!'
+        //required: 'School admin last name is required!'
     },
     //School email.
     school_email: {
         type: String,
         trim: true,
-        required: 'School contact email is required!'
+        //required: 'School contact email is required!'
     },
     //School name.
     school_name: {
         type: String,
         trim: true,
-        required: 'A school name is required!'
+        //required: 'A school name is required!'
     },
     //Address.
     address_no: {
         type: String,
         trim: true,
-        required: 'A street or post office box number is required!'
+        //required: 'A street or post office box number is required!'
     },
     street_name: {
         type: String,
         trim: true,
-        required: 'A street name is required!'
+        //required: 'A street name is required!'
     },
     street_type: {
         type: String,
-        trim: true,
-        required: 'A street type is required!'
+        trim: true
     },
     suburb: {
         type: String,
         trim: true,
-        required: 'A suburb is required!'
+        //required: 'A suburb is required!'
     },
     post_code: {
-        type: Number,
+        type: String,
         trim: true,
-        required: 'A post code is required!'
+        //required: 'A post code is required!'
     },
     city: {
         type: String,
         trim: true,
-        required: 'A city is required!'
+        //required: 'A city is required!'
     },
     country: {
         type: String,
         trim: true,
-        required: 'A country is required!'
+        //required: 'A country is required!'
     },
     //Phone number.
     phone_number: {
-        type: Number,
+        type: String,
         trim: true,
-        required: 'A contact phone number is required!'
+        //required: 'A contact phone number is required!'
     },
     //School role size.
     role_size: {
-        type: Number,
+        type: String,
         trim: true,
-        required: 'A school role size is required!'
+        //required: 'A school role size is required!'
     },
     //Record creation date.
     create_date: {
